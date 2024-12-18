@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html>
-<body>
-<style>
-        body {
-            background-color: #121212;
-            color: #E0E0E0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        p {
-            font-size: 20px;
-        }
-    </style>
-<h1>My Home Heading</h1>
-<p>My Home paragraph.</p>
+<html lang="en">
 
-</body>
+<script src="/Home/scripts/nav.js" ></script>
+<script src="/Home/scripts/profile.js"></script>
+<link rel="stylesheet" href="themes/styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<button class="fa-solid fa-bars" id="menu-button"></button>
+<div class="sidebar" id="sidebar">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">> Projects</a>
+                <ul class="dropdown-menu" id="project-list">
+                    <li><a href="https://zkiwiko.github.io/Astral" target="_blank">Astral</a></li>
+                    <li><a href="https://zkiwiko.github.io/Lunar" target="_blank">Lunar</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<header>
+    <img id="git_avatar" src="" alt="https://github.com/zKiwiko"   />
+    <div class="text-content">
+        <h1>zKiwiko</h1>
+        <p>(Newbie) C++ programmer</p>
+    </div>
+</header>
+
 </html>
