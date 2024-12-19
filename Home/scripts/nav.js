@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.remove('active');
     });
 
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-    dropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        dropdownMenu.classList.toggle('active');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdownMenu = this.closest('.dropdown').querySelector('.dropdown-menu');
+            dropdownMenu.classList.toggle('active');
+        });
     });
 });
