@@ -22,7 +22,7 @@ async function fetchAllRepos() {
 }
 
 function getPinnedRepos(allRepos) {
-    const pinnedRepoNames = ["Astral", "vscode-gpc-extension"];
+    const pinnedRepoNames = ["Astral", "vscode-gpc-extension", "Toriel-IDE];
     return allRepos.filter(repo => pinnedRepoNames.includes(repo.name));
 }
 
