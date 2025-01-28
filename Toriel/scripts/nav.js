@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener("click", () => {
             const tabId = button.dataset.tab;
             activateTab(tabId);
-            history.pushState({ tabId }, "", `/${tabId}`);
+            history.pushState({ tabId }, "", `${tabId}`);
         });
     });
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Redirect if no path is set
     if (!window.location.pathname.slice(1)) {
-        history.replaceState({}, "", "/what-is");
+        history.replaceState({}, "", "what-is");
     }
 
     // Activate the initial tab
