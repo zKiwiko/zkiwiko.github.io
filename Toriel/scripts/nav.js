@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener("click", () => {
             const tabId = button.dataset.tab;
             activateTab(tabId);
-            history.pushState({ tabId }, "", `${tabId}`);
+            location.hash = `#${tabId}`; // Use hash for navigation
         });
     });
 
@@ -20,21 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function getInitialTabFromUrl() {
-        const path = window.location.pathname.slice(1);
-        return path || 'what-is'; // Default to "what-is" if no path
+    function getInitialTabFromHash() {
+        const hash = window.location.hash.slice(1);
+        return hash || 'what-is'; // Default to "what-is"
     }
 
-    // Redirect if no path is set
-    if (!window.location.pathname.slice(1)) {
-        history.replaceState({}, "", "what-is");
-    }
+    // Activate the initial tab on page load
+    activateTab(getInitialTabFromHash());
 
-    // Activate the initial tab
-    activateTab(getInitialTabFromUrl());
-
-    window.addEventListener('popstate', (event) => {
-        const tabId = event.state?.tabId || getInitialTabFromUrl();
-        activateTab(tabId);
+    window.addEventListener('hashchange', () => {
+        activateTab(getInitialTabFromHash());
     });
 });
