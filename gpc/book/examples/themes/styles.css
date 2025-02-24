@@ -22,7 +22,9 @@ footer {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #ffffff;
+    border: 1px solid #30363d;
+    background-color: #161b22;
+    color: white;
 }
 
 .header-nav {
@@ -48,7 +50,7 @@ footer {
 }
 
 .dropdown-header {
-    background-color: #f5f5f5;
+    background-color: #30363d;
     padding: 10px 15px;
     cursor: pointer;
     display: flex;
@@ -59,12 +61,11 @@ footer {
 .dropdown-header h3 {
     margin: 0;
     font-size: 1.1em;
-    color: #30363d;
 }
 
 .dropdown-header::after {
     content: '▼';
-    font-size: 0.8em;
+    font-size: 0.9em;
     transition: transform 0.3s ease;
 }
 
@@ -76,10 +77,27 @@ footer {
     padding: 0 15px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .dropdown.active .dropdown-content {
     max-height: 500px;
     padding: 15px;
 }
+
+/* --------- Code Highlighting ------------*/
+.code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "JetBrains Mono", monospace;
+    white-space: pre-wrap;
+    display: block;
+}
+
+/* Syntax Highlighting */
+.keyword { color: #569CD6; font-weight: bold; } /* Blue */
+.string { color: #CE9178; } /* Red/Orange */
+.number { color: #B5CEA8; } /* Green */
+.function { color: #DCDCAA; } /* Yellow */
