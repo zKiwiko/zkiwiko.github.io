@@ -7,8 +7,8 @@ document.querySelectorAll('.dropdown-header').forEach(el => {
 
 function handleAnchor() {
     const anc = window.location.hash;
-    if(hash) {
-        const targetDropdown = document.querySelector(hash);
+    if(anc) {
+        const targetDropdown = document.querySelector(anc);
         if(targetDropdown) {
             targetDropdown.classList.add('active');
             targetDropdown.scrollIntoView({behavior: 'smooth'});
