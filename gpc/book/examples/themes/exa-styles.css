@@ -14,6 +14,13 @@ footer {
 
 }
 
+/* Text Related */
+
+.small-text {
+    font-size: 70%;
+    color: #DCDCDC;
+}
+
 /* ------------------------------ */
 
 .section {
@@ -88,7 +95,7 @@ footer {
 /* --------- Code Highlighting ------------*/
 .code {
     background: #1e1e1e;
-    color: #d4d4d4;
+    color: white;
     padding: 10px;
     border-radius: 5px;
     font-family: "JetBrains Mono", monospace;
@@ -96,8 +103,17 @@ footer {
     display: block;
 }
 
+iden {
+    display: inline-block;
+    width: 2ch;
+    margin-left: 2ch;
+}
+
 /* Syntax Highlighting */
-.keyword { color: #569CD6; font-weight: bold; } /* Blue */
-.string { color: #CE9178; } /* Red/Orange */
-.number { color: #B5CEA8; } /* Green */
-.function { color: #DCDCAA; } /* Yellow */
+.keyword { color: #FF7B72; }      /* Keywords */
+.string { color: #79C0FF; }       /* Strings */
+.number { color: #79C0FF; }       /* Numbers */
+.function { color: #D2A8FF; }     /* Functions */
+.comment { color: #8B949E; }      /* Comments */
+.identifier { color: #FFA657; }   /* Variables */
+.char { color: #FF7B72; }
