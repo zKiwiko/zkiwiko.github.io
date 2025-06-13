@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+@plugin '@iconify/tailwind4';
+
+* {
+    font-family: 'JetBrains Mono', serif;
+}
+
+#sidebar {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-150%);
+}
+
+#sidebar.show {
+    transform: translateX(0);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 24, 24, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.sidebar.show ~ .sidebar-overlay,
+.sidebar-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: none;
+    margin: 0 20px;
+    border-radius: 8px;
+    position: relative;
+    align-items: center;
+}
+
+.tab-content.active {
+    display: block;
+}

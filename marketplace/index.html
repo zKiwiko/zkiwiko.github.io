@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Marketplace Design Idea</title>
+    <link rel="stylesheet" href="src/style.css"/>
+    <script type="module" src="/src/main.ts"></script>
+</head>
+<body class="bg-gray-800">
+<header class="p-1 flex flex-row items-center justify-between">
+    <button id="sidebar_button"
+            class="transition-colors hover:bg-gray-600 fixed bg-gray-700 p-4 rounded-l-lg border-b-4 border-b-gray-400">
+        <span class="icon-[material-symbols--menu] text-[1.6rem] text-white"></span></button>
+    <div class="flex-1 flex-row justify-between items-center flex ml-15 bg-gray-700 rounded-r-lg border-b-4 border-b-gray-400 p-4">
+        <h1 class="text-white text-2xl">Cronus Zen Marketplace</h1>
+        <div class="flex flex-row">
+            <button class="transition-colors hover:bg-gray-500 bg-gray-600 text-white p-1 rounded-l-lg">Guide</button>
+            <button class="transition-colors hover:bg-gray-500 ml-1 bg-gray-600 text-white p-1">Firmware Update</button>
+            <button class="transition-colors hover:bg-gray-500 ml-1 bg-gray-600 text-white p-1 rounded-r-lg">Discord
+            </button>
+        </div>
+    </div>
+</header>
+<div id="sidebar_overlay" class="sidebar-overlay"></div>
+<aside id="sidebar" class="fixed top-0 left-0 h-full w-96 bg-gray-800 border-gray-700 border-r-4 text-white z-50">
+    <div class="flex flex-col p-4 justify-between">
+        <div class="flex mb-2 flex-row justify-between">
+            <p>Firmware</p>
+            <p class="bg-gray-900 text-white border-2 pl-4 pr-4 rounded-lg">0.0.0</p>
+        </div>
+        <div class="flex mb-2 flex-row justify-between">
+            <p>Serial</p>
+            <p class="bg-gray-900 text-white border-2 pl-4 pr-4 rounded-lg">XXXXXXXXXXXXXXXX</p>
+        </div>
+        <div class="flex mb-2 flex-row justify-between">
+            <p>Flash Size</p>
+            <div class="flex flex-row justify-between">
+                <p class="mr-0.5 bg-gray-900 text-white border-2 pl-4 pr-4 rounded-lg">0 bytes</p>
+                <p class="ml-0.5 bg-gray-900 text-white border-2 pl-4 pr-4 rounded-lg">0.00%</p>
+            </div>
+        </div>
+        <button class="transition-colors hover:bg-gray-500 mt-5 flex-1 bg-gray-700 rounded-lg border-2 border-gray-600">Connect</button>
+        <hr class="mt-2 mb-2 text-gray-700"/>
+        <div class="flex flex-col justify-between">
+            <button class="tab-button transition-colors mb-1 rounded-lg hover:bg-gray-500 border-gray-600 border-2 flex-1 bg-gray-700 active" data-tab="publishers">Publishers</button>
+            <button class="tab-button transition-colors mb-1 rounded-lg hover:bg-gray-500 border-gray-600 border-2 flex-1 bg-gray-700" data-tab="my-scripts">My Scripts</button>
+            <button class="tab-button transition-colors mb-1 rounded-lg hover:bg-gray-500 border-gray-600 border-2 flex-1 bg-gray-700" data-tab="gamepacks">Gamepacks</button>
+        </div>
+    </div>
+</aside>
+    <div id="publishers" class="tab-content">
+        <div class="flex flex-col items-center max-w-6xl mx-auto">
+            <h2 class="text-white text-xl mb-4">Publishers</h2>
+            <div class="w-full">
+                <div class="flex-row flex bg-gray-700 p-4 rounded-lg">
+                    <img src="public/kiwiko.png" alt="Publisher Logo" class="w-24 h-24 mr-4 rounded-full">
+                    <div class="flex flex-col text-white">
+                        <h1 class="text-2xl">Kiwiko</h1>
+                        <hr class="mt-1 mb-1"/>
+                        <p class="text-sm">This is a very long description example because im too lazy to plug in my zen and copy and paste my actual one. So for right now i just have this very long p block. This design idea took me a few hours to make, it was fun designing the whole thing. Clicking the publishers picture would lead to the link they have for their profile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="my-scripts" class="tab-content active">
+    <div class="flex flex-col items-center max-w-6xl mx-auto">
+        <h2 class="text-white text-xl mb-4">My Scripts</h2>
+        <div class="w-full">
+            <div class="bg-gray-700 p-4 rounded-lg flex flex-col justify-between">
+                <div class="flex flex-row justify-between">
+                    <h3 class="flex-1 text-white text-3xl">Quaoar</h3>
+                    <button class="transition-colors hover:bg-gray-500 text-white bg-gray-600 rounded-lg pl-1 pr-1" >Flash to slot</button>
+                </div>
+                <p class="mt-2 text-xs text-gray-400">Author: Kiwiko</p>
+                <hr class="text-white mt-2 mb-2"/>
+                <h1 class="text-white">This is a long description of what the script does, but im also too lazy to go grab this one, so enjoy this example. I dont have it implemented, but clicking 'Flash to slot' would pop up a frame with each slot, and you click which one to flash too.</h1>
+                <hr class="text-white mt-2 mb-2"/>
+                <a href="https://kiwiko.tech/marketplace" class="underline text-gray-400 text-xs">https://kiwiko.tech/marketplace</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="gamepacks" class="tab-content">
+    <div class="flex flex-col items-center max-w-6xl mx-auto">
+        <h2 class="text-white text-xl mb-4">Gamepacks</h2>
+        <div class="w-full">
+            <div class="bg-gray-700 p-4 rounded-lg">
+                <h3 class="text-white text-lg">This would look like the "My Scripts" part but for gamepacks.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
