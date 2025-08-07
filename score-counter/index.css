@@ -1,0 +1,141 @@
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.score-box {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.score-box:hover {
+  border-color: #58a6ff;
+}
+
+.score-label {
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.5rem;
+  color: #c9d1d9;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.score-label:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.1);
+}
+
+.score-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f0f6fc;
+  margin: 1rem 0;
+  font-family: "JetBrains Mono", monospace;
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.score-button {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #c9d1d9;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-button:hover {
+  background-color: #30363d;
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+.score-button:active {
+  transform: translateY(0);
+  background-color: #264f78;
+}
+
+.score-button.increment {
+  color: #7ec982;
+}
+
+.score-button.decrement {
+  color: #ff7b82;
+}
+
+.reset-button {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #8b949e;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.reset-button:hover {
+  background-color: #30363d;
+  border-color: #ff7b82;
+  color: #ff7b82;
+}
+
+.page-title {
+  text-align: center;
+  color: #f0f6fc;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media (max-width: 768px) {
+  .score-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .score-box {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+}
