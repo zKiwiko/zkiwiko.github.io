@@ -1,9 +1,37 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.global-label {
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #c9d1d9;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease;
+  min-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.global-label:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.1);
+}
+
 .score-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -117,15 +145,26 @@
   text-align: center;
   color: #f0f6fc;
   font-size: 2.5rem;
-  margin: 2rem 0;
+  margin: 1rem 0 0.5rem 0;
   font-family: "JetBrains Mono", monospace;
 }
 
 @media (max-width: 768px) {
+  .main-container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .global-label {
+    min-width: 250px;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
   .score-container {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .score-box {
@@ -136,6 +175,6 @@
 
   .page-title {
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 }

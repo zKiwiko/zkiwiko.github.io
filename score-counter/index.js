@@ -80,6 +80,21 @@ document.querySelectorAll(".score-label").forEach((input, index) => {
   });
 });
 
+// Handle global label save/load
+const globalLabel = document.querySelector(".global-label");
+if (globalLabel) {
+  // Load saved global label
+  const savedGlobalLabel = localStorage.getItem("globalLabel");
+  if (savedGlobalLabel) {
+    globalLabel.value = savedGlobalLabel;
+  }
+
+  // Save global label on change
+  globalLabel.addEventListener("input", function () {
+    localStorage.setItem("globalLabel", this.value);
+  });
+}
+
 // Load saved scores
 function loadScores() {
   for (let player = 1; player <= 3; player++) {
