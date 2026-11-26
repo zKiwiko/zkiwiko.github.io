@@ -10,7 +10,7 @@
   <body>
     <h1 class="page-title">Score Counter</h1>
 
-    <div class="main-container">
+    <div class="main-container vbox align-center">
       <input
         type="text"
         class="global-label"
@@ -19,8 +19,8 @@
         placeholder="Enter label for this score set"
       />
 
-      <div class="score-container">
-        <div class="score-box">
+      <div class="score-container hbox center wrap stack-on-mobile">
+        <div class="score-box vbox">
           <input
             type="text"
             class="score-label"
@@ -28,18 +28,18 @@
             maxlength="20"
           />
           <div class="score-display" id="score1">0</div>
-          <div class="button-group">
-            <button class="score-button decrement" onclick="changeScore(1, -1)">
+          <div class="button-group hbox center">
+            <button class="score-button decrement center" onclick="changeScore(1, -1)">
               −
             </button>
-            <button class="score-button increment" onclick="changeScore(1, 1)">
+            <button class="score-button increment center" onclick="changeScore(1, 1)">
               +
             </button>
           </div>
           <button class="reset-button" onclick="resetScore(1)">Reset</button>
         </div>
 
-        <div class="score-box">
+        <div class="score-box vbox">
           <input
             type="text"
             class="score-label"
@@ -47,18 +47,18 @@
             maxlength="20"
           />
           <div class="score-display" id="score2">0</div>
-          <div class="button-group">
-            <button class="score-button decrement" onclick="changeScore(2, -1)">
+          <div class="button-group hbox center">
+            <button class="score-button decrement center" onclick="changeScore(2, -1)">
               −
             </button>
-            <button class="score-button increment" onclick="changeScore(2, 1)">
+            <button class="score-button increment center" onclick="changeScore(2, 1)">
               +
             </button>
           </div>
           <button class="reset-button" onclick="resetScore(2)">Reset</button>
         </div>
 
-        <div class="score-box">
+        <div class="score-box vbox">
           <input
             type="text"
             class="score-label"
@@ -66,11 +66,11 @@
             maxlength="20"
           />
           <div class="score-display" id="score3">0</div>
-          <div class="button-group">
-            <button class="score-button decrement" onclick="changeScore(3, -1)">
+          <div class="button-group hbox center">
+            <button class="score-button decrement center" onclick="changeScore(3, -1)">
               −
             </button>
-            <button class="score-button increment" onclick="changeScore(3, 1)">
+            <button class="score-button increment center" onclick="changeScore(3, 1)">
               +
             </button>
           </div>

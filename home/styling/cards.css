@@ -1,0 +1,59 @@
+.project-card {
+    background-color: var(--github-primary);
+    color: var(--github-foreground);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    padding: 1rem;
+    min-width: 0;
+}
+
+[data-project-list] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.project-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.project-card:hover .project-description,
+.project-card:focus-within .project-description {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.project-header [data-repo-language-icon] {
+    margin-right: 0.4rem;
+}
+
+.repo-stats {
+    gap: 0.75rem;
+}
+
+.repo-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--github-muted);
+}
+
+.repo-stat i {
+    color: var(--github-accent);
+}
+
+.project-card [data-repo-link] {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    [data-project-list] {
+        grid-template-columns: 1fr;
+    }
+}

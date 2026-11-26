@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../shared/common.css" />
+    <link rel="stylesheet" href="./styling/index.css" />
+    <link rel="stylesheet" href="./styling/tabs.css" />
+    <link rel="stylesheet" href="./styling/cards.css" />
+    <title>Home</title>
+  </head>
+  <header class="center hbox stack-on-mobile">
+    <img id="git-pfp" src="https://github.com/zkiwiko.png" alt="..."></img>
+    <div class="vbox">
+        <h2 id="name"></h2>
+        <div class="pride-flags">
+            <div data-hint="Transgender"  class="hint rounded transgender-flag"><span aria-hidden="true"></span></div>
+            <div data-hint="Demigirl"     class="hint rounded demi-girl-flag"><span aria-hidden="true"></span></div>
+            <div data-hint="Demisexual"   class="hint rounded demi-sexual-flag"><span class="demi-flag-arrow" aria-hidden="true"></span></div>
+            <div data-hint="Demiromantic" class="hint rounded demi-romantic-flag"><span class="demi-flag-arrow" aria-hidden="true"></span></div>
+        </div>
+        <p class="pronouns">She/They</p>
+    </div>
+  </header>
+  <body>
+    <div class="vbox center">
+        
+    <div class="languages hbox" role="group" aria-label="Language selector">
+        <button type="button" class="button english" data-lang="en" aria-pressed="false">English</button>
+        <button type="button" class="button japanese" data-lang="ja" aria-pressed="false">日本語</button>
+        <button type="button" class="button maori" data-lang="mi" aria-pressed="false">Te reo Māori</button>
+    </div>
+
+    <div class="tab-layout">
+
+    <div class="tab-list" role="group" aria-label="Profile sections">
+        <button type="button" class="tab-button" data-tab="about" aria-pressed="true">About</button>
+        <button type="button" class="tab-button" data-tab="Osu" aria-pressed="false">Osu!</button>
+        <button type="button" class="tab-button" data-tab="projects" aria-pressed="false">Projects</button>
+        <button type="button" class="tab-button" data-tab="socials" aria-pressed="false">Socials</button>
+    </div>
+
+    <section class="tab-container" aria-label="Profile content">
+        <div class="tab-content active" data-tab-content="about">
+            <p id="about-content"></p>
+
+            <h3 class="about-header">Gaming</h3>
+            <p id="about-gaming"></p>
+
+            <h3 class="about-header">Music</h3>
+            <p id="about-music"></p>
+            <br/>
+            <details>
+                <summary class="music-header">足立レイ・Adachi Rei</summary>
+                <div class="project-card center vbox">
+                    <a href="https://mechanicalgirl.jp/adachi-rei/">Source Website</a>
+                    <a href="https://utau.fandom.com/wiki/Rei_Adachi">UTAU Wiki</a>
+                    <div class="hbox center">
+                        <div class="vbox center">
+                            <p>UTAU</p>
+                            <img class="about-image"src="./assets/adachi-utau.png" alt="Adachi Rei UTAU" />
+                        </div>
+
+                        <div class="vbox center">
+                            <p>Vocaloid 6</p>
+                            <img class="about-image" src="./assets/adachi-v6.webp" alt="Adachi Rei Vocaloid 6" />
+                        </div>
+                    </div>
+                </div>
+            </details>
+            <details>
+                <summary class="music-header">可不・KAFU</summary>
+                <div class="project-card center vbox">
+                    <a href="https://musical-isotope.kamitsubaki.jp/product/kafu/">Source Website</a>
+                    <a href="https://cevio.fandom.com/wiki/KAFU">CeVIO AI Wiki</a>
+                    <div class="hbox center">
+                        <div class="vbox center">
+                            <p>CeVIO AI</p>
+                            <img class="about-image"src="./assets/kafu.webp" alt="KAFU CeVIO AI" />
+                        </div>
+                    </div>
+                </div>
+            </details>
+            <details>
+                <summary class="music-header">雨衣・Ui</summary>
+                <div class="project-card center vbox">
+                    <a href="https://voisona.com/song/artist/ui_ja_JP/">Source Website</a>
+                    <a href="https://cevio.fandom.com/wiki/Ui">CeVIO AI Wiki</a>
+                    <div class="hbox center">
+                        <div class="vbox center">
+                            <p>CeVIO AI</p>
+                            <img class="about-image"src="./assets/ui.webp" alt="Ui CeVIO AI" />
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <h3 class="about-header">Programming</h3>
+            <p id="about-programming"></p>
+
+            <h3 class="about-header">Politics</h3>
+            <p id="about-politics"></p>
+
+        </div>
+
+        <div class="tab-content" data-tab-content="Osu">
+            <div class="osu-mode-list hbox wrap" role="group" aria-label="osu! game modes">
+                <button type="button" class="button osu-mode-button" data-osu-mode="standard" aria-label="Standard" title="Standard" aria-pressed="true">
+                    <img class="osu-mode-icon" src="./assets/mode-osu.svg" alt="" />
+                </button>
+                <button type="button" class="button osu-mode-button" data-osu-mode="taiko" aria-label="Taiko" title="Taiko" aria-pressed="false">
+                    <img class="osu-mode-icon" src="./assets/mode-taiko.svg" alt="" />
+                </button>
+                <button type="button" class="button osu-mode-button" data-osu-mode="catch" aria-label="Catch" title="Catch" aria-pressed="false">
+                    <img class="osu-mode-icon" src="./assets/mode-catch.svg" alt="" />
+                </button>
+                <button type="button" class="button osu-mode-button" data-osu-mode="mania" aria-label="Mania" title="Mania" aria-pressed="false">
+                    <img class="osu-mode-icon" src="./assets/mode-mania.svg" alt="" />
+                </button>
+            </div>
+            <div class="osu-mode-panel active" data-osu-mode-panel="standard">
+                <a href="https://osu.ppy.sh/u/Ari desu"><img src="https://osu-sig.s23.moe/card?user=Ari%20desu&mode=std&lang=en&blur=6&animation=true&hue=255" /></a>
+            </div>
+            <div class="osu-mode-panel" data-osu-mode-panel="taiko">
+                <a href="https://osu.ppy.sh/u/Ari desu"><img src="https://osu-sig.s23.moe/card?user=Ari%20desu&mode=taiko&lang=en&blur=6&animation=true&hue=255" /></a>
+            </div>
+            <div class="osu-mode-panel" data-osu-mode-panel="catch">
+                <a href="https://osu.ppy.sh/u/Ari desu"><img src="https://osu-sig.s23.moe/card?user=Ari%20desu&mode=catch&lang=en&blur=6&animation=true&hue=255" /></a>
+            </div>
+            <div class="osu-mode-panel" data-osu-mode-panel="mania">
+                <a href="https://osu.ppy.sh/u/Ari desu"><img src="https://osu-sig.s23.moe/card?user=Ari%20desu&mode=mania&lang=en&blur=6&animation=true&hue=255" /></a>
+            </div>
+        </div>
+
+        <div class="tab-content" data-tab-content="projects">
+            <h2 class="project-header">Programming Projects</h2>
+            <div data-project-list></div>
+            <template id="project-card-template">
+                <div class="project-card vbox" hidden>
+                    <p class="project-header">
+                        <span data-repo-name></span>
+                        <i data-repo-language-icon role="img"></i>
+                    </p>
+                    <p class="project-description" data-repo-description>Loading repository description...</p>
+                    <div class="repo-stats hbox wrap" role="group" aria-label="Repository statistics">
+                        <span class="repo-stat" data-repo-stat="stars" role="img">
+                            <span data-repo-stars>—</span>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                        </span>
+                        <span class="repo-stat" data-repo-stat="forks" role="img">
+                            <span data-repo-forks>—</span>
+                            <i class="fa-solid fa-code-fork" aria-hidden="true"></i>
+                        </span>
+                        <span class="repo-stat" data-repo-stat="issues" role="img">
+                            <span data-repo-issues>—</span>
+                            <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a class="button" data-repo-link target="_blank" rel="noopener noreferrer">Repository</a>
+                </div>
+            </template>
+        </div>
+        <div class="tab-content vbox" data-tab-content="socials">
+            <div class="hbox">
+                <i class="fa-brands fa-discord"></i>
+                <p>Discord (kiwiko)</p>
+            </div>
+
+            <div class="hbox">
+                <span class="socials-icon osu-icon"></span>
+                <a href="https://osu.ppy.sh/u/Ari desu" target="_blank" rel="noopener noreferrer">osu! (Ari desu)</a>
+            </div>
+
+            <div class="hbox">
+                <i class="fa-solid fa-book"></i>
+                <a href="https://anilist.com/user/zKiwiko">Anilist (zKiwiko)</a>
+            </div>
+
+            <h4 class="socials-header">Music</h4>
+
+            <div class="hbox">
+                <i class="fa-brands fa-tiktok"></i>
+                <a href="https://www.tiktok.com/@kiwiko.utau" target="_blank" rel="noopener noreferrer">TikTok (kiwiko.utau)</a>
+            </div>
+            <div class="hbox">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/kiwiko.utau/" target="_blank" rel="noopener noreferrer">Instagram (kiwiko.utau)</a>
+            </div>
+            <div class="hbox">
+                <i class="fa-brands fa-youtube"></i>
+                <a href="https://www.youtube.com/@kiwiko_utau" target="_blank" rel="noopener noreferrer">Youtube (kiwiko_utau)</a>
+            </div>
+
+            <h4 class="socials-header">Development</h4>
+
+            <div class="hbox">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/zkiwiko" target="_blank" rel="noopener noreferrer">Github (zKiwiko)</a>
+            </div>
+            <div class="hbox">
+                <i class="fa-brands fa-codeberg"></i>
+                <a href="https://codeberg.org/kiwiko" target="_blank" rel="noopener noreferrer">Codeberg (kiwiko)</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    <p id="meow-p"></p>
+    </div>
+    
+  </body>
+  <script type="module" src="./src/index.js"></script>
+  <script type="module" src="./src/events.js"></script>
+  <script type="module" src="./src/tabs.js"></script>
+  <script type="module" src="./src/projects.js"></script>
+</html>

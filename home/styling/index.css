@@ -1,0 +1,241 @@
+header {
+    background-image: linear-gradient(
+        0deg,
+        var(--github-primary) 0%,
+        var(--github-surface) 100%
+    );
+}
+
+header {
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+header img {
+    width: clamp(100px, 25vw, 200px);
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: box-shadow 0.1s ease-out;
+}
+
+header img:hover {
+    box-shadow: 0 0px 10px 5px rgba(88, 166, 255, 0.1);
+    cursor: pointer;
+}
+
+header h2 {
+    border-bottom: 1px solid var(--github-border);
+}
+
+[id^="about-"] {
+    white-space: pre-line;
+}
+
+/* Classes and Stuff */
+
+.rounded {
+    border-radius: 0.2rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pronouns {
+    display: inline-block;
+    align-self: flex-start;
+
+    background-image: linear-gradient(90deg, #ff69b4 40%, #ffd700 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.pride-flags {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.transgender-flag {
+    background-image: linear-gradient(
+        #5ac7ed,
+        #5ac7ed 20%,
+        #efa4b1 20%,
+        #efa4b1 40%,
+        #fff 40%,
+        #fff 60%,
+        #efa4b1 60%,
+        #efa4b1 80%,
+        #5ac7ed 80%
+    );
+    line-height: 20px;
+    width: 26px;
+}
+
+.demi-girl-flag {
+    background-image: linear-gradient(
+        #7f7f7f,
+        #7f7f7f 14.3%,
+        #c4c4c4 14.3%,
+        #c4c4c4 28.6%,
+        #ffaec9 28.6%,
+        #ffaec9 42.9%,
+        #fff 42.9%,
+        #fff 57.2%,
+        #ffaec9 57.2%,
+        #ffaec9 71.5%,
+        #c4c4c4 71.5%,
+        #c4c4c4 85.8%,
+        #7f7f7f 85.8%
+    );
+    line-height: 20px;
+    width: 26px;
+}
+
+.demi-sexual-flag,
+.demi-romantic-flag {
+    position: relative;
+    width: 26px;
+    height: 20px;
+}
+
+.demi-sexual-flag {
+    background-image: linear-gradient(
+        #fff,
+        #fff 40%,
+        #6d0070 40%,
+        #6d0070 60%,
+        #d2d2d2 60%
+    );
+}
+
+.demi-romantic-flag {
+    background-image: linear-gradient(
+        #fff,
+        #fff 40%,
+        #339933 40%,
+        #339933 60%,
+        #d2d2d2 60%
+    );
+}
+
+.demi-flag-arrow {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 40%;
+    background: #000;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.hint {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hint::after {
+    content: attr(data-hint);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--github-surface);
+    color: var(--github-foreground);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.hint:hover::after {
+    opacity: 100;
+    visibility: visible;
+}
+
+.button {
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--github-surface);
+    color: var(--github-foreground);
+    border: 1px solid var(--github-border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--github-surface-hover);
+}
+
+.button:active {
+    background-color: var(--github-surface-active);
+}
+
+.button[aria-pressed="true"] {
+    background-color: var(--github-accent-soft);
+    border-color: var(--github-accent);
+}
+
+.project-header {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.socials-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.about-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.music-header {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.lang-icon {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.osu-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+    -webkit-mask: url("../assets/mode-osu.svg") no-repeat center / contain;
+    mask: url("../assets/mode-osu.svg") no-repeat center / contain;
+}
+
+.about-image {
+    width: clamp(200px, 50vw, 300px);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 0.2rem;
+}
+
+@media (max-width: 768px) {
+    .pronouns,
+    .pride-flags {
+        align-self: center;
+    }
+}

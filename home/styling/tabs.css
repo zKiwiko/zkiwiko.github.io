@@ -1,0 +1,97 @@
+.tab-layout {
+    width: 100%;
+}
+
+.tab-container {
+    margin: 0 10px 10px;
+    border-top: 1px solid var(--github-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background-image: linear-gradient(
+        0deg,
+        var(--github-primary) 0%,
+        var(--github-surface) 100%
+    );
+}
+
+.tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 10px 0;
+    background-color: var(--github-primary);
+}
+
+.tab-button {
+    padding: 0.5rem 0.75rem;
+    color: var(--github-muted);
+    background-color: var(--github-primary);
+    border: 1px solid var(--github-border);
+    border-bottom: 0;
+    cursor: pointer;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.tab-button + .tab-button {
+    border-left: 0;
+}
+
+.tab-button:hover:not([aria-pressed="true"]) {
+    color: var(--github-foreground);
+    background-color: var(--github-surface-hover);
+}
+
+.tab-button[aria-pressed="true"] {
+    color: var(--github-foreground-strong);
+    background-color: var(--github-surface);
+    border-bottom: 1px solid var(--github-surface);
+    margin-bottom: -1px;
+}
+
+.tab-button:focus-visible {
+    outline: 2px solid var(--github-accent);
+    outline-offset: -2px;
+}
+
+.tab-content {
+    padding: 1rem;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.osu-mode-list {
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.osu-mode-button {
+    display: grid;
+    place-items: center;
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+}
+
+.osu-mode-icon {
+    color: var(--github-muted);
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.osu-mode-panel {
+    display: none;
+}
+
+.osu-mode-panel.active {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,18 +1,15 @@
 .main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  --layout-gap: 1.5rem;
   min-height: calc(100vh - 120px);
   padding: 1rem;
-  gap: 1.5rem;
 }
 
 .global-label {
   background: transparent;
-  border: 1px solid #30363d;
+  border: 1px solid var(--github-border);
   border-radius: 6px;
   padding: 1rem;
-  color: #c9d1d9;
+  color: var(--github-foreground);
   font-family: "JetBrains Mono", monospace;
   font-size: 1.2rem;
   text-align: center;
@@ -23,42 +20,36 @@
 }
 
 .global-label:focus {
-  border-color: #58a6ff;
-  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.1);
+  border-color: var(--github-accent);
+  box-shadow: 0 0 0 2px var(--github-accent-soft);
 }
 
 .score-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  --layout-gap: 2rem;
   padding: 1rem;
-  gap: 2rem;
-  flex-wrap: wrap;
 }
 
 .score-box {
-  background-color: #161b22;
-  border: 1px solid #30363d;
+  --layout-gap: 1rem;
+  background-color: var(--github-surface);
+  border: 1px solid var(--github-border);
   border-radius: 6px;
   padding: 2rem;
   text-align: center;
   min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   transition: border-color 0.2s ease;
 }
 
 .score-box:hover {
-  border-color: #58a6ff;
+  border-color: var(--github-accent);
 }
 
 .score-label {
   background: transparent;
-  border: 1px solid #30363d;
+  border: 1px solid var(--github-border);
   border-radius: 4px;
   padding: 0.5rem;
-  color: #c9d1d9;
+  color: var(--github-foreground);
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
   text-align: center;
@@ -67,30 +58,28 @@
 }
 
 .score-label:focus {
-  border-color: #58a6ff;
-  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.1);
+  border-color: var(--github-accent);
+  box-shadow: 0 0 0 2px var(--github-accent-soft);
 }
 
 .score-display {
   font-size: 3rem;
   font-weight: bold;
-  color: #f0f6fc;
+  color: var(--github-foreground-strong);
   margin: 1rem 0;
   font-family: "JetBrains Mono", monospace;
-  text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+  text-shadow: 0 0 10px var(--github-accent-glow);
 }
 
 .button-group {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  --layout-gap: 0.5rem;
 }
 
 .score-button {
-  background-color: #21262d;
-  border: 1px solid #30363d;
+  background-color: var(--github-surface-hover);
+  border: 1px solid var(--github-border);
   border-radius: 4px;
-  color: #c9d1d9;
+  color: var(--github-foreground);
   font-size: 1.5rem;
   font-weight: bold;
   width: 50px;
@@ -98,35 +87,32 @@
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: "JetBrains Mono", monospace;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .score-button:hover {
-  background-color: #30363d;
-  border-color: #58a6ff;
+  background-color: var(--github-border);
+  border-color: var(--github-accent);
   transform: translateY(-2px);
 }
 
 .score-button:active {
   transform: translateY(0);
-  background-color: #264f78;
+  background-color: var(--github-selection);
 }
 
 .score-button.increment {
-  color: #7ec982;
+  color: var(--github-success);
 }
 
 .score-button.decrement {
-  color: #ff7b82;
+  color: var(--github-danger);
 }
 
 .reset-button {
-  background-color: #21262d;
-  border: 1px solid #30363d;
+  background-color: var(--github-surface-hover);
+  border: 1px solid var(--github-border);
   border-radius: 4px;
-  color: #8b949e;
+  color: var(--github-muted);
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -136,14 +122,14 @@
 }
 
 .reset-button:hover {
-  background-color: #30363d;
-  border-color: #ff7b82;
-  color: #ff7b82;
+  background-color: var(--github-border);
+  border-color: var(--github-danger);
+  color: var(--github-danger);
 }
 
 .page-title {
   text-align: center;
-  color: #f0f6fc;
+  color: var(--github-foreground-strong);
   font-size: 2.5rem;
   margin: 1rem 0 0.5rem 0;
   font-family: "JetBrains Mono", monospace;
@@ -152,7 +138,7 @@
 @media (max-width: 768px) {
   .main-container {
     padding: 0.5rem;
-    gap: 1rem;
+    --layout-gap: 1rem;
   }
 
   .global-label {
@@ -162,8 +148,7 @@
   }
 
   .score-container {
-    flex-direction: column;
-    gap: 1.5rem;
+    --layout-gap: 1.5rem;
     padding: 0.5rem;
   }
 
